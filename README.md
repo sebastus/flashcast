@@ -34,7 +34,9 @@ Then use the following commands to get the details you need about your storage a
 ```
 az storage account show --name yourAccount --resource-group yourResourceGroup --query id --output tsv
 
-set storageid = /subscriptions/yourSubscription/resourceGroups/yourResourceGroup/providers/Microsoft.Storage/storageAccounts/yourAccount
+set storageid = (the output from the previous command), for example:  
+
+/subscriptions/yourSubscription/resourceGroups/yourResourceGroup/providers/Microsoft.Storage/storageAccounts/yourAccount
 
 set queueid="%storageid%/queueservices/default/queues/blobcreateevents"
 
